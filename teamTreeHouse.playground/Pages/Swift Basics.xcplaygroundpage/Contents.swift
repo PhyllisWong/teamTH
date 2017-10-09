@@ -78,9 +78,26 @@ let value = arrayOfInts[4]
 
 let discardedValue = arrayOfInts.remove(at: 5)
 
+// Dictionaries
 
+/*
+     Airport Code (key)     Airport Name (Value)
+ 
+             LGA            La Guardia
+             LHR            Heathrow
+             CDG            Charles de Gualle
+             HKG            Hong Kong International
+             DXB            Dubai International
+ */
 
-
+var airportCodes: [String: String] = [
+ "LGA": "La Guardia",
+ "LHR": "Heathrow",
+ "CDG": "Charles de Gualle",
+ "HKG": "Hong Kong International",
+ "DXB": "Dubai International"
+]
+print(airportCodes)
 
 
 
