@@ -18,7 +18,7 @@ todo.append("Finish collections course")
 // Using unary addition operator
 todo += ["buy groceries", "respond to emails"]
 
-print(todo)
+//print(todo)
 todo += ["Order book online", "some other task"]
 
 // immutable arrays
@@ -39,12 +39,12 @@ todo[1] = "Watch Treehouse content"
 // Insert Using Indexes
 // not recommended for large data sets
 todo.insert("watch TV", at: 2)
-print(todo)
+//print(todo)
 
 // Removing items from Arrays
 // not recommended for large data sets
 todo.remove(at: 2)
-print(todo)
+//print(todo)
 
 
 /*
@@ -78,6 +78,8 @@ let value = arrayOfInts[4]
 
 let discardedValue = arrayOfInts.remove(at: 5)
 
+// todo[6] Crashed
+
 // Dictionaries
 
 /*
@@ -97,22 +99,30 @@ var airportCodes: [String: String] = [
  "HKG": "Hong Kong International",
  "DXB": "Dubai International"
 ]
-print(airportCodes)
+
+//print(airportCodes)
+
+airportCodes["LGA"]
+airportCodes["SFO"] = "San Francisco International"
+
+airportCodes.updateValue("Dublin International", forKey: "DUB")
+airportCodes["DXB"] = nil
+airportCodes.removeValue(forKey: "CDG")
+
+//print(airportCodes)
+
+// Dealing with Non Existant Data
+
+let newYorkAirport = airportCodes["LGA"]
+type(of: newYorkAirport)
+let orlandoAirport = airportCodes["MCO"]
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+var todo2: [String] = ["Finish collections course", "buy groceries", "respond to emails", "pick up dry cleaning", "order books on line", "mow the lawn"]
+todo2[0]
+print(todo2[0])
+print(todo2[1])
+print(todo2[2])
 
 
 
