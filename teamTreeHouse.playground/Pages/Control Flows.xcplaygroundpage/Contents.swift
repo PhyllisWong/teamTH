@@ -249,8 +249,16 @@ for airportCode in airportCodes2 {
 }
 
 
+let randomTemperature = 25
 
-
+switch randomTemperature {
+case 0..<25: print("Forget clothes, you're basically a popscicle.")
+case 25...32: print("It's freezing. Put on a parka plus hat and gloves.")
+case 33...68: print("It's a bit chilly. I recommend wearing a warm sweater.")
+case 69..<75: print("It's perfect t-shirt weather.")
+case 75...90: print("It is pretty hot out there! Shorts will help.")
+default: print("Don't even bother to go out there!")
+}
 
 
 
