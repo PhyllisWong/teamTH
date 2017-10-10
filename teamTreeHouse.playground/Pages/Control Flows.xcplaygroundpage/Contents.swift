@@ -304,6 +304,32 @@ for (key, value) in world {
 }
 print(europeanCapitals, asianCapitals, otherCapitals)
 
+/*
+ Enter your FizzBuzz solution here! Before you hit submit, make the following changes:
+ 
+ Step 1: Enter your code in between the comments shown below. The code is going inside a "function" that will help verify your solution.
+ 
+ Step 2: Change your variable/constant name that you are checking in each step to n. For example if (n % 3 == 0). Note: You don't need to create n, it is already provided.
+ 
+ Step 3: Change all your print statements to return statements. For example: print("FizzBuzz") becomes return "FizzBuzz".
+
+ */
+
+func fizzBuzz(n: Int) -> String {
+    // Enter your code between the two comment markers
+    var result: String = ""
+    if n % 3 == 0 && n % 5 == 0 {
+        result = "FizBuzz"
+    } else if n % 3 == 0 {
+        result = "Fizz"
+    } else if n % 5 == 0 {
+        result = "Buzz"
+    } else {
+        result = String(n)
+    }
+    // End code
+    return result
+}
 
 
 
