@@ -229,11 +229,24 @@ if !isRaining {
     print("Yay the sun is out.")
 }
 
+if (isRaining || isSnowing) && temperature < 2 {
+    print("Definitely get the gloves out!")
+}
 
 
+// Switch Statements
 
+let airportCodes2 = ["LGA", "LHR", "CDG", "HKG", "DXB"]
 
-
+for airportCode in airportCodes2 {
+    switch airportCode {
+    case "LGA": print("New York")
+    case "LHR": print("London")
+    case "CDG": print("Paris")
+    case "HKG": print("Hong Kong")
+    default: print("I don't know which city that airport is in!")
+    }
+}
 
 
 

@@ -3,6 +3,6 @@
     <pages>
         <page name='Operators'/>
         <page name='Delegates'/>
-        <page name='Swift Basics'/>
+        <page name='Control Flows'/>
     </pages>
 </playground>
