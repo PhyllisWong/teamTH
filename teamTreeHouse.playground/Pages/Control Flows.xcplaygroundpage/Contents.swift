@@ -331,7 +331,9 @@ func fizzBuzz(n: Int) -> String {
     return result
 }
 
-
+for i in 1..<100 {
+    print(fizzBuzz(n: i))
+}
 
 
 
