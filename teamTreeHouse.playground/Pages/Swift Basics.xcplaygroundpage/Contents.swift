@@ -118,11 +118,163 @@ type(of: newYorkAirport)
 let orlandoAirport = airportCodes["MCO"]
 
 
-var todo2: [String] = ["Finish collections course", "buy groceries", "respond to emails", "pick up dry cleaning", "order books on line", "mow the lawn"]
+var todo2: [String] = ["finish collections course", "buy groceries", "respond to emails", "pick up dry cleaning", "order books on line", "mow the lawn"]
 todo2[0]
-print(todo2[0])
-print(todo2[1])
-print(todo2[2])
+//print(todo2[0])
+//print(todo2[1])
+//print(todo2[2])
+for task in todo2 {
+    print(task)
+}
+
+/*
+ For this challenge, we're going to use a for in loop to compute the multiplication table for 6 and append the results to an array.
+ 
+ Your task for this first step is to create a for in loop that iterates over a range. Multiplication tables typically range from 1 to 10 (with 10 included) so the range you are iterating over should go from 1 to 10.
+ 
+ Inside the body of the loop, we're going to use the multiplier to get the multiple of 6. For example, if the multiplier is 1, then the multiple is 1 times 6, which is equal to 6.
+ 
+ Once you have a value, append it to the results array. This way once the for loop has iterated over the entire range, the array will contain the first 10 multiples of 6.
+ 
+ For in loops also define a constant that temporarily stores the value in the iteration process. For the loop you're writing, name this constant multiplier.
+ */
+var results: [Int] = []
+
+for multiplier in 1...10 {
+    let product = multiplier * 6
+    results.append(product)
+}
+print(results)
+
+// While loops
+
+var x = 0
+
+while x <= 5 {
+    print(x)
+    x += 1
+}
+
+var index = 0
+
+while index < todo2.count {
+    index += 1
+    print(index)
+}
+
+// Repeat While
+
+var counter = 1
+
+while counter < 1 {
+    print("I'm inside a while loop")
+    counter += 1
+}
+
+repeat {
+    print("I'm inside the repeat loop")
+    counter += 1
+} while counter < 1
+
+/*
+ In this task, we have an array of numbers and we want to compute the sum of its values.
+ 
+ We have a variable ,sum, that will store the value of the sum of numbers from the array.
+ 
+ We also have a variable ,counter, which we will use to track the number of iterations of the while loop.
+ 
+ Step 1: Create a while loop. The while loop should continue as long as the value of counter is less than the number of items in the array. (Hint: You can get that number by using the count property)
+ 
+ Now that we have the while loop set up, it's time to compute the sum!
+ Using the value of counter as an index value, retrieve each value from the array and add it to the value of sum.
+ 
+ For example: sum = sum + newValue. Or you could use the compound addition operator sum += newValue where newValue is the value retrieved from the array.
+ */
+
+let numbers = [2,8,1,16,4,3,9]
+var sum = 0
+var counter2 = 0
+
+while counter2 < numbers.count {
+    sum += numbers[counter2]
+    counter2 += 1
+}
+print(sum)
+
+// If statements and logical operators
+
+var temperature = 11
+
+if temperature > 13 && temperature < 18 {
+    print("Its getting chilly. I recommend a light sweater.")
+} else if temperature < 12 {
+    print("It's getting cold. Time to wear a jacket.")
+} else {
+    print("It feels great outside. A t-shirt will do.")
+}
+
+if temperature > 7 && temperature < 12 {
+    print("Might want to weat a scarf with that jacket.")
+}
+
+var isRaining = true
+var isSnowing = false
+
+if isRaining || isSnowing {
+    print("Get out those boots!")
+    isRaining = false
+}
+
+if !isRaining {
+    print("Yay the sun is out.")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
