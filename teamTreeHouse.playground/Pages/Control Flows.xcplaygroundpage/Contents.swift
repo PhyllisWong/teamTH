@@ -248,24 +248,61 @@ for airportCode in airportCodes2 {
     }
 }
 
+import GameKit
+let randomTemp0 = GKRandomSource.sharedRandom().nextInt(upperBound: 125)
+let randomTemp1 = GKRandomSource.sharedRandom().nextInt(upperBound: 125)
+let randomTemp2 = GKRandomSource.sharedRandom().nextInt(upperBound: 125)
 
-let randomTemperature = 25
-
-switch randomTemperature {
-case 0..<25: print("Forget clothes, you're basically a popscicle.")
-case 25...32: print("It's freezing. Put on a parka plus hat and gloves.")
-case 33...68: print("It's a bit chilly. I recommend wearing a warm sweater.")
-case 69..<75: print("It's perfect t-shirt weather.")
-case 75...90: print("It is pretty hot out there! Shorts will help.")
-default: print("Don't even bother to go out there!")
+func whatShouldIWear(temp: Int) {
+    let randomTemp: Int = temp
+    switch randomTemp {
+    case 0..<25: print("Forget clothes, you're basically a popscicle.")
+    case 25...32: print("It's freezing. Put on a parka plus hat and gloves.")
+    case 33...68: print("It's a bit chilly. I recommend wearing a warm sweater.")
+    case 69..<75: print("It's perfect t-shirt weather.")
+    case 75...90: print("It is pretty hot today! Shorts will help.")
+    default: print("Don't even bother to go out there!")
+    }
 }
 
+whatShouldIWear(temp: randomTemp0)
+whatShouldIWear(temp: randomTemp1)
+whatShouldIWear(temp: randomTemp2)
 
+/*
+ In the editor we have a dictionary that contains a three letter country code as a key and that country's capital city as the associated value.
+ 
+ We also have three empty arrays, europeanCapitals, asianCapitals, and otherCapitals. The goal is to iterate through the dictionary and end up with just the names of the capital cities in the relevant array.
+ 
+ For example, after you execute the code you write, europeanCapitals will have the values ["Vaduz", "Brussels", "Sofia"] (not necessarily in that order).
+ 
+ To do this you're going to use a switch statement and switch on the key. For cases where the key is a European country, append the value (not the key!) to the europeanCapitals array. For keys that are Asian countries, append the value to asianCapitals and finally for the default case, append the values to otherCapitals.
+ */
 
+var europeanCapitals: [String] = []
+var asianCapitals: [String] = []
+var otherCapitals: [String] = []
 
+let world = [
+    "BEL": "Brussels",
+    "LIE": "Vaduz",
+    "BGR": "Sofia",
+    "USA": "Washington D.C.",
+    "MEX": "Mexico City",
+    "BRA": "Brasilia",
+    "IND": "New Delhi",
+    "VNM": "Hanoi"]
 
-
-
+for (key, value) in world {
+    // Enter your code below
+    switch key {
+    case "BEL", "LIE", "BGR" : europeanCapitals.append(value)
+    case "IND", "VNM" : asianCapitals.append(value)
+    default : otherCapitals.append(value)
+    }
+    // End code
+}
+print(europeanCapitals, asianCapitals, otherCapitals)
 
 
 
