@@ -4,5 +4,6 @@
         <page name='Operators'/>
         <page name='Delegates'/>
         <page name='Control Flows'/>
+        <page name='functions'/>
     </pages>
 </playground>
