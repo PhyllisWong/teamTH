@@ -38,6 +38,7 @@ func arrModifier(array: [Int]) {
     var arrOfInts = array
     arrOfInts.append(5)
     let secondArrOfInts = arrOfInts
+    print(secondArrOfInts)
 }
 
 var arrOfInts = [1, 2, 3, 4]
