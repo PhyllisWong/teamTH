@@ -10,7 +10,7 @@ func area(length: Int, width: Int) -> Int {
 let areaOfFirstRoom = area(length: 10, width: 12)
 let areaOfSecondRoom = area(length: 15, width: 22)
 
-func carpetCostHaving(length: Int, width: Int, carpetColor color: String = "tan") -> Int {
+func carpetCostHaving(length: Int, width: Int, carpetColor color: String = "tan") -> (Int, String)) {
     // grey carpet - $1 p/sq ft
     // tan carpet - $2 p/sq ft
     // deep blue carpet - $4 p/sq ft

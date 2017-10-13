@@ -17,3 +17,12 @@ strFlavors = ', '.join(flavors)
 
 # print("My favorite flavors are " + strFlavors)
 print("My favorite flavors are: {}".format(", ".join(flavors)))
+
+available = "banana split;hot fudge;cherry;malted;black and white"
+sundaes = available.split(';')
+print(sundaes)
+
+var_one = 'hellot world'
+print(var_one[5])
+var_two = 'hellot world'
+print(var_two[-2])
