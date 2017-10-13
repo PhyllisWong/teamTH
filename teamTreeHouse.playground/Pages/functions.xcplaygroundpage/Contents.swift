@@ -37,7 +37,7 @@ print(result.carpetColor)
 func arrModifier(array: [Int]) {
     var arrOfInts = array
     arrOfInts.append(5)
-    var secondArrOfInts = arrOfInts
+    let secondArrOfInts = arrOfInts
 }
 
 var arrOfInts = [1, 2, 3, 4]
