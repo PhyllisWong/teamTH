@@ -138,19 +138,46 @@ print(myColor.description)
 
 // Custom class using Struct type Point
 class Enemy {
-    var life: Int
+    var life: Int = 2
     let position: Point
     
-    init(life: Int, position: Point) {
-        self.life = life
-        self.position = position
+    init(x: Int, y: Int) {
+        self.position = Point(x: x, y: y)
+    }
+    
+    func decreaseLife(by factor: Int) {
+        life -= factor
     }
 }
 
+/*
+ Let's get in some practice creating a class. Declare a class named Shape with a variable property named numberOfSides of type Int.
+ 
+ Remember that with classes you are required to write an initializer method.
+ 
+ Once you have a class definition, create an instance and assign it to a constant named someShape.
+ */
 
+class Shape {
+    var numberOfSides: Int
+    
+    init(numberOfSides: Int) {
+        self.numberOfSides = numberOfSides
+    }
+}
 
+let someShape = Shape(numberOfSides: 4)
 
-
+class Tower {
+    let position : Point
+    var range: Int = 1
+    var strength: Int = 1
+    
+    
+    init(x: Int, y: Int) {
+        self.position = Point(x: x, y: y)
+    }
+}
 
 
 
