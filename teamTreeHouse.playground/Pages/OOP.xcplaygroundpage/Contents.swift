@@ -136,6 +136,18 @@ struct RGBColor {
 let myColor = RGBColor(red: 86.0, green: 191.0, blue: 131.0, alpha: 1.0)
 print(myColor.description)
 
+// Custom class using Struct type Point
+class Enemy {
+    var life: Int
+    let position: Point
+    
+    init(life: Int, position: Point) {
+        self.life = life
+        self.position = position
+    }
+}
+
+
 
 
 
