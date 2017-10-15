@@ -179,7 +179,12 @@ class Tower {
     }
     
     func fire(at enemy: Enemy) {
-        
+        if isInRange(of: enemy) {
+            enemy.decreaseLife(by: self.strength)
+            print("Gotcha")
+        } else {
+            print("Darn, out of range")
+        }
     }
     
     func isInRange(of enemy: Enemy) -> Bool {
@@ -192,6 +197,18 @@ class Tower {
         return false
     }
 }
+
+let tower = Tower(x: 0, y: 0)
+let enemy = Enemy(x: 1, y: 1)
+tower.fire(at: enemy)
+
+let tower2 = Tower(x: 2, y: 2)
+let enemy2 = Enemy(x: 4, y: 4)
+tower2.fire(at: enemy2)
+
+
+
+
 
 /*
  In the editor you've been provided with a struct named Location that models a coordinate point using longitude and latitude values.
