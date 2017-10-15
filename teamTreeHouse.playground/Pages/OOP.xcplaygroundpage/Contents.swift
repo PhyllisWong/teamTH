@@ -177,8 +177,47 @@ class Tower {
     init(x: Int, y: Int) {
         self.position = Point(x: x, y: y)
     }
+    
+    func fire(at enemy: Enemy) {
+        
+    }
+    
+    func isInRange(of enemy: Enemy) -> Bool {
+        let availablePositions = position.points(inRange: range)
+        for point in availablePositions {
+            if point.x == enemy.position.x && point.y == enemy.position.y {
+                return true
+            }
+        }
+        return false
+    }
 }
 
+/*
+ In the editor you've been provided with a struct named Location that models a coordinate point using longitude and latitude values.
+ 
+ For this task we want to create a class named Business. The class contains two constant stored properties: name of type String and location of type Location.
+ 
+ In the initializer method pass in a name and an instance of Location to set up the instance of Business. Using this initializer, create an instance and assign it to a constant named someBusiness.
+ 
+ */
+
+struct Location {
+    let latitude: Double
+    let longitude: Double
+}
+
+class Business {
+    let name: String
+    let location: Location
+    
+    init(name: String, latitude: Double, longitude: Double) {
+        self.name = name
+        self.location = Location(latitude: latitude, longitude: longitude)
+    }
+}
+
+let someBusiness = Business(name: "some business", latitude: 488.0, longitude: 12.45)
 
 
 
