@@ -6,5 +6,6 @@
         <page name='Control Flows'/>
         <page name='functions'/>
         <page name='OOP'/>
+        <page name='Value vs Reference'/>
     </pages>
 </playground>
