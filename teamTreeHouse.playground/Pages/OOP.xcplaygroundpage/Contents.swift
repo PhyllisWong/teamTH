@@ -150,6 +150,16 @@ class Enemy {
     }
 }
 
+class SuperEnemy: Enemy {
+    let isSuper: Bool = true
+    
+    override init(x: Int, y: Int) {
+        super.init(x: x, y: y)
+        self.life = 50
+    }
+}
+
+
 /*
  Let's get in some practice creating a class. Declare a class named Shape with a variable property named numberOfSides of type Int.
  
@@ -198,6 +208,22 @@ class Tower {
     }
 }
 
+class LaserTower: Tower {
+    
+    override init(x: Int, y: Int) {
+        super.init(x: x, y: y)
+        self.range = 100
+        self.strength = 100
+    }
+    
+    override func fire(at enemy: Enemy) {
+        while enemy.life >= 0 {
+            enemy.decreaseLife(by: strength)
+        }
+        print("Enemy destroyed!")
+    }
+}
+
 let tower = Tower(x: 0, y: 0)
 let enemy = Enemy(x: 1, y: 1)
 tower.fire(at: enemy)
@@ -205,7 +231,11 @@ tower.fire(at: enemy)
 let tower2 = Tower(x: 2, y: 2)
 let enemy2 = Enemy(x: 4, y: 4)
 tower2.fire(at: enemy2)
-
+let superEnemy = SuperEnemy(x: 1, y: 1)
+let laserTower = LaserTower(x: 2, y: 2)
+print(superEnemy.life)
+tower2.fire(at: superEnemy)
+laserTower.fire(at: superEnemy)
 
 
 
@@ -236,19 +266,73 @@ class Business {
 
 let someBusiness = Business(name: "some business", latitude: 488.0, longitude: 12.45)
 
+/*
+ In the editor, I have provided a class named Vehicle.
+ 
+ Your task is to create a subclass of Vehicle, named Car, that adds an additional stored property numberOfSeats of type Int with a default value of 4.
+ 
+ Once you've implemented the Car class, create an instance and assign it to a constant named someCar.
+ */
+
+
+class Vehicle {
+    var numberOfDoors: Int
+    var numberOfWheels: Int
+    
+    init(withDoors doors: Int, andWheels wheels: Int) {
+        self.numberOfDoors = doors
+        self.numberOfWheels = wheels
+    }
+}
+
+class Car: Vehicle {
+    var numberOfSeats: Int = 4
+    
+    override init(withDoors doors: Int, andWheels wheels: Int) {
+        super.init(withDoors: doors, andWheels: wheels)
+    }
+}
+
+let someCar = Car(withDoors: 4, andWheels: 4)
+
+/*
+ Challenge Task 1 of 1
+ 
+ I've provided a base class Person in the editor below. Once an instance of Person is created, you can call fullName() and get a person's full name.
+ 
+ Your job is to create a class named Doctor that overrides the fullName() method. Once you have a class definition, create an instance and assign it to a constant named someDoctor.
+ 
+ For example, given the first name "Sam", and last name "Smith", calling fullName() on an instance of Person would return "Sam Smith", but calling the same method on an instance of Doctor would return "Dr. Smith".
+ */
 
 
 
 
+class Person2 {
+    let firstName: String
+    let lastName: String
+    
+    init(firstName: String, lastName: String) {
+        self.firstName = firstName
+        self.lastName = lastName
+    }
+    
+    func fullName() -> String {
+        return "\(firstName) \(lastName)"
+    }
+}
 
+let newPerson = Person2(firstName: "New", lastName: "Person")
+print(newPerson.fullName())
 
+class Doctor: Person2 {
+    override func fullName() -> String {
+        return "Dr. \(lastName)"
+    }
+}
 
-
-
-
-
-
-
+let someDoctor = Doctor(firstName: "Sam", lastName: "Smith")
+print(someDoctor.fullName())
 
 
 
