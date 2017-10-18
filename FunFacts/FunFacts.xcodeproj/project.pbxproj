@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B910A5FD1F97B140007FEB19 /* TriviaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B910A5FC1F97B140007FEB19 /* TriviaVC.swift */; };
+		B910A5FF1F97B207007FEB19 /* DadJokesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B910A5FE1F97B207007FEB19 /* DadJokesVC.swift */; };
+		B910A6011F97B2A9007FEB19 /* ChooseFunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B910A6001F97B2A9007FEB19 /* ChooseFunVC.swift */; };
 		B9CDE1E01F9525BB0006F247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CDE1DF1F9525BB0006F247 /* AppDelegate.swift */; };
-		B9CDE1E21F9525BB0006F247 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CDE1E11F9525BB0006F247 /* ViewController.swift */; };
+		B9CDE1E21F9525BB0006F247 /* FunFactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CDE1E11F9525BB0006F247 /* FunFactsVC.swift */; };
 		B9CDE1E51F9525BB0006F247 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CDE1E31F9525BB0006F247 /* Main.storyboard */; };
 		B9CDE1E71F9525BB0006F247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9CDE1E61F9525BB0006F247 /* Assets.xcassets */; };
 		B9CDE1EA1F9525BB0006F247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CDE1E81F9525BB0006F247 /* LaunchScreen.storyboard */; };
@@ -16,9 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B910A5FC1F97B140007FEB19 /* TriviaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaVC.swift; sourceTree = "<group>"; };
+		B910A5FE1F97B207007FEB19 /* DadJokesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DadJokesVC.swift; sourceTree = "<group>"; };
+		B910A6001F97B2A9007FEB19 /* ChooseFunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseFunVC.swift; sourceTree = "<group>"; };
 		B9CDE1DC1F9525BB0006F247 /* FunFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9CDE1DF1F9525BB0006F247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B9CDE1E11F9525BB0006F247 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B9CDE1E11F9525BB0006F247 /* FunFactsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunFactsVC.swift; sourceTree = "<group>"; };
 		B9CDE1E41F9525BB0006F247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9CDE1E61F9525BB0006F247 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9CDE1E91F9525BB0006F247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,8 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				B9CDE1DF1F9525BB0006F247 /* AppDelegate.swift */,
-				B9CDE1E11F9525BB0006F247 /* ViewController.swift */,
+				B910A5FC1F97B140007FEB19 /* TriviaVC.swift */,
+				B910A5FE1F97B207007FEB19 /* DadJokesVC.swift */,
+				B9CDE1E11F9525BB0006F247 /* FunFactsVC.swift */,
 				B9CDE1F11F95886E0006F247 /* FactProvider.swift */,
+				B910A6001F97B2A9007FEB19 /* ChooseFunVC.swift */,
 				B9CDE1E31F9525BB0006F247 /* Main.storyboard */,
 				B9CDE1E61F9525BB0006F247 /* Assets.xcassets */,
 				B9CDE1E81F9525BB0006F247 /* LaunchScreen.storyboard */,
@@ -139,8 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9CDE1E21F9525BB0006F247 /* ViewController.swift in Sources */,
+				B9CDE1E21F9525BB0006F247 /* FunFactsVC.swift in Sources */,
+				B910A5FF1F97B207007FEB19 /* DadJokesVC.swift in Sources */,
 				B9CDE1E01F9525BB0006F247 /* AppDelegate.swift in Sources */,
+				B910A6011F97B2A9007FEB19 /* ChooseFunVC.swift in Sources */,
+				B910A5FD1F97B140007FEB19 /* TriviaVC.swift in Sources */,
 				B9CDE1F21F95886E0006F247 /* FactProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

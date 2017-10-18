@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FunFactsVC.swift
 //  FunFacts
 //
 //  Created by djchai on 10/16/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FunFactsVC: UIViewController {
 
     @IBOutlet weak var funFactLabel: UILabel!
     let factProvider = FactProvider()
