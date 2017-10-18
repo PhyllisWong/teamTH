@@ -44,7 +44,6 @@
                                 <color key="tintColor" red="0.54946152169999996" green="0.67613408220000004" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Trivia Questions"/>
                                 <connections>
-                                    <action selector="didPressTrivia:" destination="kNh-0D-3wd" eventType="touchUpInside" id="52x-EY-ZY3"/>
                                     <segue destination="Wok-4H-4q9" kind="show" id="zfN-dr-E4u"/>
                                 </connections>
                             </button>
@@ -54,7 +53,6 @@
                                 <color key="tintColor" red="0.54946152169999996" green="0.67613408220000004" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Dad Jokes"/>
                                 <connections>
-                                    <action selector="didPressDadJokes:" destination="kNh-0D-3wd" eventType="touchUpInside" id="gDq-sV-Fmt"/>
                                     <segue destination="y3F-oR-MGI" kind="show" id="KXy-8b-laF"/>
                                 </connections>
                             </button>
