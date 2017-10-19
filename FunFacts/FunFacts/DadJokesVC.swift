@@ -10,10 +10,34 @@ import UIKit
 
 class DadJokesVC: UIViewController {
 
+    @IBOutlet weak var answerLabel: UILabel!
+    @IBOutlet weak var jokeLabel: UILabel!
+    
+    let jokeProvider = JokeProvider()
+
+    
+    @IBAction func didPressAnswer() {
+        // Figure out how to display the correct joke answer for the joke
+        let showJoke = jokeProvider.randomJoke()
+        answerLabel.text = showJoke[1]
+        answerLabel.isHidden = false
+    }
+    
+    @IBAction func didPressAnother() {
+        let showJoke = jokeProvider.randomJoke()
+        jokeLabel.text = showJoke[0]
+        answerLabel.isHidden = true
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        let showJoke = jokeProvider.randomJoke()
+        jokeLabel.text = showJoke[0]
+        answerLabel.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +45,5 @@ class DadJokesVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
