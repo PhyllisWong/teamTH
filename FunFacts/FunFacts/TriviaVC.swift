@@ -13,12 +13,23 @@ class TriviaVC: UIViewController {
     @IBOutlet weak var triviaLabel: UILabel!
     let randomTrivia = TriviaProvider()
     
+    
+    @IBAction func didPressChooseAnswer() {
+        goToChooseAnswerVC()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         let showQuestion = randomTrivia.randomQuestion()
         triviaLabel.text = showQuestion[0]
+    }
+    
+    func goToChooseAnswerVC() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let chooseAnswerVC = storyboard.instantiateViewController(withIdentifier: "ChooseAnswerVC") as! ChooseAnswerVC
+        // TODO: Make sure to set the *delegate* on the FunFactsViewController
+        
+        self.navigationController?.pushViewController(chooseAnswerVC, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
