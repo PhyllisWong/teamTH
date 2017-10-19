@@ -11,6 +11,7 @@
 		B910A5FF1F97B207007FEB19 /* DadJokesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B910A5FE1F97B207007FEB19 /* DadJokesVC.swift */; };
 		B910A6011F97B2A9007FEB19 /* ChooseFunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B910A6001F97B2A9007FEB19 /* ChooseFunVC.swift */; };
 		B910A6031F97F688007FEB19 /* JokeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B910A6021F97F688007FEB19 /* JokeProvider.swift */; };
+		B910A6051F983460007FEB19 /* triviaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B910A6041F983460007FEB19 /* triviaProvider.swift */; };
 		B9CDE1E01F9525BB0006F247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CDE1DF1F9525BB0006F247 /* AppDelegate.swift */; };
 		B9CDE1E21F9525BB0006F247 /* FunFactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CDE1E11F9525BB0006F247 /* FunFactsVC.swift */; };
 		B9CDE1E51F9525BB0006F247 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CDE1E31F9525BB0006F247 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		B910A5FE1F97B207007FEB19 /* DadJokesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DadJokesVC.swift; sourceTree = "<group>"; };
 		B910A6001F97B2A9007FEB19 /* ChooseFunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseFunVC.swift; sourceTree = "<group>"; };
 		B910A6021F97F688007FEB19 /* JokeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeProvider.swift; sourceTree = "<group>"; };
+		B910A6041F983460007FEB19 /* triviaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = triviaProvider.swift; sourceTree = "<group>"; };
 		B9CDE1DC1F9525BB0006F247 /* FunFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9CDE1DF1F9525BB0006F247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9CDE1E11F9525BB0006F247 /* FunFactsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunFactsVC.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				B9CDE1DF1F9525BB0006F247 /* AppDelegate.swift */,
 				B910A5FC1F97B140007FEB19 /* TriviaVC.swift */,
+				B910A6041F983460007FEB19 /* triviaProvider.swift */,
 				B910A5FE1F97B207007FEB19 /* DadJokesVC.swift */,
 				B910A6021F97F688007FEB19 /* JokeProvider.swift */,
 				B9CDE1E11F9525BB0006F247 /* FunFactsVC.swift */,
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9CDE1E21F9525BB0006F247 /* FunFactsVC.swift in Sources */,
+				B910A6051F983460007FEB19 /* triviaProvider.swift in Sources */,
 				B910A5FF1F97B207007FEB19 /* DadJokesVC.swift in Sources */,
 				B910A6031F97F688007FEB19 /* JokeProvider.swift in Sources */,
 				B9CDE1E01F9525BB0006F247 /* AppDelegate.swift in Sources */,
