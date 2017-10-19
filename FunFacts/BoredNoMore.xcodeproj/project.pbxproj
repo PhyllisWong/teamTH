@@ -121,7 +121,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B9CDE1D71F9525BB0006F247 /* Build configuration list for PBXProject "FunFacts" */;
+			buildConfigurationList = B9CDE1D71F9525BB0006F247 /* Build configuration list for PBXProject "BoredNoMore" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -307,7 +307,7 @@
 				INFOPLIST_FILE = FunFacts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.phyllisApps.FunFacts;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phyllisApps.BoredNoMore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -323,7 +323,7 @@
 				INFOPLIST_FILE = FunFacts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.phyllisApps.FunFacts;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phyllisApps.BoredNoMore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -333,7 +333,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B9CDE1D71F9525BB0006F247 /* Build configuration list for PBXProject "FunFacts" */ = {
+		B9CDE1D71F9525BB0006F247 /* Build configuration list for PBXProject "BoredNoMore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9CDE1EC1F9525BB0006F247 /* Debug */,

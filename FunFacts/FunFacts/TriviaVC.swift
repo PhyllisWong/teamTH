@@ -25,11 +25,12 @@ class TriviaVC: UIViewController {
     }
     
     func goToChooseAnswerVC() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let chooseAnswerVC = storyboard.instantiateViewController(withIdentifier: "ChooseAnswerVC") as! ChooseAnswerVC
-        // TODO: Make sure to set the *delegate* on the FunFactsViewController
-        
-        self.navigationController?.pushViewController(chooseAnswerVC, animated: true)
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let chooseAnswerVC = storyboard.instantiateViewController(withIdentifier: "ChooseAnswerVC") as! ChooseAnswerVC
+//        // TODO: Make sure to set the *delegate* on the FunFactsViewController
+//
+//        self.navigationController?.pushViewController(chooseAnswerVC, animated: true)
+        self.performSegue(withIdentifier: "ChooseAnswer", sender: nil)
     }
 
     override func didReceiveMemoryWarning() {

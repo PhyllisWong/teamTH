@@ -183,7 +183,6 @@
                                 <state key="normal" title="CHOOSE ANSWER"/>
                                 <connections>
                                     <action selector="didPressChooseAnswer" destination="Wok-4H-4q9" eventType="touchUpInside" id="Ln9-mD-4r5"/>
-                                    <segue destination="wQZ-hn-dk2" kind="show" identifier="ChooseAnswer" id="NBt-m0-D2v"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -201,6 +200,7 @@
                     </view>
                     <connections>
                         <outlet property="triviaLabel" destination="ysn-Xh-bUF" id="YGJ-zb-dNn"/>
+                        <segue destination="wQZ-hn-dk2" kind="show" identifier="ChooseAnswer" id="XBS-Lx-boX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lh6-ot-jEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -316,6 +316,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" id="EuC-YG-v9Y">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
