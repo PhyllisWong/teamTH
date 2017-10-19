@@ -14,29 +14,27 @@ class DadJokesVC: UIViewController {
     @IBOutlet weak var jokeLabel: UILabel!
     
     let jokeProvider = JokeProvider()
-
+    var currentJoke: DadJoke?
     
     @IBAction func didPressAnswer() {
         // Figure out how to display the correct joke answer for the joke
-        let showJoke = jokeProvider.randomJoke()
-        answerLabel.text = showJoke[1]
+        answerLabel.text = currentJoke?.punchLine
         answerLabel.isHidden = false
     }
     
     @IBAction func didPressAnother() {
         let showJoke = jokeProvider.randomJoke()
-        jokeLabel.text = showJoke[0]
+        self.currentJoke = showJoke
+        jokeLabel.text = showJoke.joke
         answerLabel.isHidden = true
     }
-    
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let showJoke = jokeProvider.randomJoke()
-        jokeLabel.text = showJoke[0]
+        self.currentJoke = showJoke
+        jokeLabel.text = showJoke.joke
         answerLabel.isHidden = true
     }
 
@@ -45,5 +43,4 @@ class DadJokesVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
 }

@@ -49,7 +49,7 @@ struct FactProvider {
         "Honey never spoils.",
         "Blueberries will not ripen until they are picked.",
         "You must be really bored.",
-        " It is considered good luck in Japan when a sumo wrestler makes your baby cry.",
+        "It is considered good luck in Japan when a sumo wrestler makes your baby cry.",
         "In 2006 someone tried to sell New Zealand on eBay. The price got up to $3,000 before eBay shut it down."
     ]
     
