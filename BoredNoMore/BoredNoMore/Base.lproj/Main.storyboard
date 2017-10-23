@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +18,7 @@
         <!--Choose FunVC-->
         <scene sceneID="xlw-KU-pDj">
             <objects>
-                <viewController id="kNh-0D-3wd" customClass="ChooseFunVC" customModule="FunFacts" sceneMemberID="viewController">
+                <viewController id="kNh-0D-3wd" customClass="ChooseFunVC" customModule="BoredNoMore" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8nz-az-8gc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,7 +98,7 @@
         <!--FunFactsVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="FunFactsVC" customClass="FunFactsVC" customModule="FunFacts" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="FunFactsVC" customClass="FunFactsVC" customModule="BoredNoMore" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,7 +160,7 @@
         <!--TriviaVC-->
         <scene sceneID="nkv-qQ-Pbm">
             <objects>
-                <viewController storyboardIdentifier="TriviaVC" id="Wok-4H-4q9" customClass="TriviaVC" customModule="FunFacts" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TriviaVC" id="Wok-4H-4q9" customClass="TriviaVC" customModule="BoredNoMore" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G1W-8G-93j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -210,7 +210,7 @@
         <!--ChooseAnswerVC-->
         <scene sceneID="3sI-em-awc">
             <objects>
-                <viewController storyboardIdentifier="ChooseAnswerVC" id="wQZ-hn-dk2" userLabel="ChooseAnswerVC" customClass="ChooseAnswerVC" customModule="FunFacts" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChooseAnswerVC" id="wQZ-hn-dk2" userLabel="ChooseAnswerVC" customClass="ChooseAnswerVC" customModule="BoredNoMore" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iia-bE-Mmr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -237,7 +237,7 @@
         <!--Dad JokesVC-->
         <scene sceneID="kpS-J2-dUB">
             <objects>
-                <viewController id="y3F-oR-MGI" customClass="DadJokesVC" customModule="FunFacts" sceneMemberID="viewController">
+                <viewController id="y3F-oR-MGI" customClass="DadJokesVC" customModule="BoredNoMore" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fZB-NW-Hcd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

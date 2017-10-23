@@ -19,6 +19,7 @@
 		B9CDE1E71F9525BB0006F247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9CDE1E61F9525BB0006F247 /* Assets.xcassets */; };
 		B9CDE1EA1F9525BB0006F247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CDE1E81F9525BB0006F247 /* LaunchScreen.storyboard */; };
 		B9CDE1F21F95886E0006F247 /* FactProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CDE1F11F95886E0006F247 /* FactProvider.swift */; };
+		B9DF70851F9D78DC00204522 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9DF70841F9D78DC00204522 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +29,7 @@
 		B910A6021F97F688007FEB19 /* JokeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeProvider.swift; sourceTree = "<group>"; };
 		B910A6041F983460007FEB19 /* triviaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = triviaProvider.swift; sourceTree = "<group>"; };
 		B910A6061F984FB5007FEB19 /* ChooseAnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAnswerVC.swift; sourceTree = "<group>"; };
-		B9CDE1DC1F9525BB0006F247 /* FunFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9CDE1DC1F9525BB0006F247 /* BoredNoMore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoredNoMore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9CDE1DF1F9525BB0006F247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9CDE1E11F9525BB0006F247 /* FunFactsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunFactsVC.swift; sourceTree = "<group>"; };
 		B9CDE1E41F9525BB0006F247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -36,6 +37,7 @@
 		B9CDE1E91F9525BB0006F247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9CDE1EB1F9525BB0006F247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9CDE1F11F95886E0006F247 /* FactProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactProvider.swift; sourceTree = "<group>"; };
+		B9DF70841F9D78DC00204522 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,8 @@
 		B9CDE1D31F9525BB0006F247 = {
 			isa = PBXGroup;
 			children = (
-				B9CDE1DE1F9525BB0006F247 /* FunFacts */,
+				B9DF70841F9D78DC00204522 /* Default-568h@2x.png */,
+				B9CDE1DE1F9525BB0006F247 /* BoredNoMore */,
 				B9CDE1DD1F9525BB0006F247 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,12 +63,12 @@
 		B9CDE1DD1F9525BB0006F247 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B9CDE1DC1F9525BB0006F247 /* FunFacts.app */,
+				B9CDE1DC1F9525BB0006F247 /* BoredNoMore.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B9CDE1DE1F9525BB0006F247 /* FunFacts */ = {
+		B9CDE1DE1F9525BB0006F247 /* BoredNoMore */ = {
 			isa = PBXGroup;
 			children = (
 				B9CDE1DF1F9525BB0006F247 /* AppDelegate.swift */,
@@ -82,15 +85,15 @@
 				B9CDE1E81F9525BB0006F247 /* LaunchScreen.storyboard */,
 				B9CDE1EB1F9525BB0006F247 /* Info.plist */,
 			);
-			path = FunFacts;
+			path = BoredNoMore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B9CDE1DB1F9525BB0006F247 /* FunFacts */ = {
+		B9CDE1DB1F9525BB0006F247 /* BoredNoMore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9CDE1EE1F9525BB0006F247 /* Build configuration list for PBXNativeTarget "FunFacts" */;
+			buildConfigurationList = B9CDE1EE1F9525BB0006F247 /* Build configuration list for PBXNativeTarget "BoredNoMore" */;
 			buildPhases = (
 				B9CDE1D81F9525BB0006F247 /* Sources */,
 				B9CDE1D91F9525BB0006F247 /* Frameworks */,
@@ -100,9 +103,9 @@
 			);
 			dependencies = (
 			);
-			name = FunFacts;
+			name = BoredNoMore;
 			productName = FunFacts;
-			productReference = B9CDE1DC1F9525BB0006F247 /* FunFacts.app */;
+			productReference = B9CDE1DC1F9525BB0006F247 /* BoredNoMore.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -134,7 +137,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B9CDE1DB1F9525BB0006F247 /* FunFacts */,
+				B9CDE1DB1F9525BB0006F247 /* BoredNoMore */,
 			);
 		};
 /* End PBXProject section */
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9CDE1EA1F9525BB0006F247 /* LaunchScreen.storyboard in Resources */,
+				B9DF70851F9D78DC00204522 /* Default-568h@2x.png in Resources */,
 				B9CDE1E71F9525BB0006F247 /* Assets.xcassets in Resources */,
 				B9CDE1E51F9525BB0006F247 /* Main.storyboard in Resources */,
 			);
@@ -304,10 +308,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S44SNCV32X;
-				INFOPLIST_FILE = FunFacts/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BoredNoMore/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.phyllisApps.BoredNoMore;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phyllisApps.FunFacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -320,10 +324,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S44SNCV32X;
-				INFOPLIST_FILE = FunFacts/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BoredNoMore/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.phyllisApps.BoredNoMore;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phyllisApps.FunFacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -342,7 +346,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9CDE1EE1F9525BB0006F247 /* Build configuration list for PBXNativeTarget "FunFacts" */ = {
+		B9CDE1EE1F9525BB0006F247 /* Build configuration list for PBXNativeTarget "BoredNoMore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9CDE1EF1F9525BB0006F247 /* Debug */,
