@@ -124,19 +124,51 @@ ColorComponent.hsb(100.0, 115.0, 100.0, 1.0)
 
 struct Person {
     let firstName: String
-    var middleName: String?
+    let middleName: String?
     let lastName: String
+    
+//    func fullName(firstName: String, middleName: String?, lastName: String) -> String {
+//        guard let middleName = middleName else {return}
+//        let fullName = "\(firstName) \(middleName) \(lastName)"
+//        return fullName
+//    }
 }
 
+let me = Person(firstName: "Phyllis", middleName: "Marie", lastName: "Wong")
 
 
+let airportCodes = ["CDG": "Chales del Gaulle"]
+if let newYorkAirport = airportCodes["JFK"] {
+    print(newYorkAirport)
+} else {
+    print("that key does not exist")
+}
 
+let weatherDictionary: [String : [String : String]] = [
+    "currently" : ["temperature" : "22.3"],
+    "daily" : ["temperature" : "22.3"],
+    "weekly" : ["temperature" : "22.3"]
+]
 
+if let dailyWeather = weatherDictionary["daily"] {
+    if let highTemp = dailyWeather["temperature"] {
+        print(highTemp)
+    }
+}
 
+if let dailyWeather = weatherDictionary["daily"], let highTemperature = dailyWeather["temperature"] {
+    print(highTemperature)
+}
 
+let movieDictionary = ["Spectre": ["cast": ["Daniel Craig", "Christoph Waltz", "Léa Seydoux", "Ralph Fiennes", "Monica Bellucci", "Naomie Harris"]]]
 
+var leadActor: String = ""
 
-
+// Enter code below
+if let movie = movieDictionary["Spectre"], let actors = movie["cast"] {
+        leadActor = actors[0]
+        print(leadActor)
+    }
 
 
 
