@@ -170,5 +170,53 @@ if let movie = movieDictionary["Spectre"], let actors = movie["cast"] {
         print(leadActor)
     }
 
+// Downsides to using If Let
+
+struct Friend {
+    let name : String
+    let age : String
+    let address : String?
+}
+
+func new(friendDictionary: [String : String]) -> Friend? {
+    if let name = friendDictionary["name"],
+        let age = friendDictionary["age"],
+        let address = friendDictionary["address"] {
+        return Friend(name: name, age: age, address: address)
+    } else {
+        return nil
+    }
+}
+
+func new2(friendDictionary: [String : String]) -> Friend? {
+    if let name = friendDictionary["name"], let age = friendDictionary["age"] {
+        let address = friendDictionary["address"]
+        return Friend(name: name, age: age, address: address)
+    } else {
+        return nil
+    }
+}
+
+// early exit
+
+func newFriend(friendDictionary: [String : String]) -> Friend? {
+    guard let name = friendDictionary["name"], let age = friendDictionary["age"] else {return nil}
+    let address = friendDictionary["address"]
+    return Friend(name: name, age: age, address: address)
+}
+
+let phyllis = Friend(name: "dj chai", age: "42", address: nil)
+
+
+print(phyllis.age)
+
+
+
+
+
+
+
+
+
 
 
