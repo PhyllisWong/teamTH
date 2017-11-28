@@ -1,5 +1,5 @@
-# import sys
-#
+import sys
+
 # def onceInATram(num):
 #     num_str = str(num)
 #     l_int = int(num_str[0:3])
@@ -67,19 +67,45 @@
 #     result = onceInATram(num)
 #     print(result)
 
-n = int(input())
-list_to_print = []
-for _ in range(n):
-    s = input().split()
-    cmd = s[0]
-    args = s[1:]
-    if cmd != "print":
-        cmd += "(" + ",".join(args) + ")"
-        eval("l." + cmd)
-    else:
-        print(l)
+# n = int(input())
+# list_to_print = []
+# for _ in range(n):
+#     s = input().split()
+#     cmd = s[0]
+#     args = s[1:]
+#     if cmd != "print":
+#         cmd += "(" + ",".join(args) + ")"
+#         eval("l." + cmd)
+#     else:
+#         print(l)
+
+# if __name__ == "__main__":
+#     input()
+#     result = onceInATram(num)
+#     print(result)
+
+def choose_laptop(n):
+    lowest = 0
+    newLowest = 0
+    for _ in range(n):
+        name, value = input().strip().split(' ')
+        name, value = [str(name), str(value)]
+        for i in value:
+            sevens = 0
+            fours = 0
+            if value[i] != str(7) or value[i] != str(4):
+                break
+            if value[i] == str(7):
+                sevens += 1
+            elif value[i] == str(4):
+                fours += 1
+            if sevens == fours and value:
+                lowest = int(value)
+
 
 if __name__ == "__main__":
-    input()
-    result = onceInATram(num)
-    print(result)
+    n = int(input().strip())
+    for a0 in range(n):
+        name, value = input().strip().split(' ')
+        name, value = [str(name), int(value)]
+        print(name, value)
