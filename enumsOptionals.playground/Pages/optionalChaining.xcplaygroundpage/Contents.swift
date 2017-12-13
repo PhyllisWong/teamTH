@@ -29,8 +29,11 @@ residence.address = address
 phyllis.residence = residence
 let phyllisBuilding = phyllis.residence?.address?.buildingName
 
-if let phyllisBuilding = phyllisBuilding {
-    print(phyllisBuilding)
+if let home = phyllis.residence, let postalAddress = home.address, let buildingNumber = postalAddress.buildingNumber, let convertedNumber = Int(buildingNumber) {
+    print("multiple checks method: \(convertedNumber)")
 }
 
+if let buildNum = phyllis.residence?.address?.buildingNumber {
+    print("optional chaining method: \(buildNum)")
+}
 
