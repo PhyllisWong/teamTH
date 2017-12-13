@@ -19,7 +19,7 @@ func isNotificationMuted(on day: String) -> Bool {
     }
 }
 
-enum Day {
+enum Day: String {
     case sunday
     case monday
     case tuesday
@@ -28,6 +28,8 @@ enum Day {
     case friday
     case saturday
 }
+
+Day.friday.rawValue
 
 enum DayType {
     case weekday
