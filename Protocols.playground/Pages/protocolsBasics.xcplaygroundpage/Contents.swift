@@ -169,7 +169,7 @@ class Dice {
 
 var dice6 = Dice(sides: 6, generator: LinearCongruentGenerator())
 print(dice6.roll())
-
+print(dice6.roll())
 
 
 
