@@ -3,5 +3,6 @@
     <pages>
         <page name='wifiLampEx'/>
         <page name='protocolsBasics'/>
+        <page name='animalExample'/>
     </pages>
 </playground>
