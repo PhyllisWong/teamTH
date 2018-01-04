@@ -181,7 +181,7 @@ protocol PrettyPrintable: Printable {
     func prettyDescription() -> String
 }
 
-struct User: PrettyPrintable {
+struct User: PrettyPrintable, Equatable {
     let name: String
     let age: Int
     let address: String
@@ -193,13 +193,19 @@ struct User: PrettyPrintable {
     func prettyDescription() -> String {
         return "name: \(name)\nage: \(age)\naddress: \(address)"
     }
+    
+    static func ==(lhs: User, rhs: User) -> Bool {
+        return lhs.name == rhs.name && lhs.age == rhs.age && lhs.address == rhs.address
+    }
 }
 
 let user = User(name: "Phyllis", age: 24, address: "some address")
 user.description()
 print(user.prettyDescription())
 
+let anotherUser = User(name: "Phyllis", age: 24, address: "some address")
 
+user == anotherUser
 
 
 
