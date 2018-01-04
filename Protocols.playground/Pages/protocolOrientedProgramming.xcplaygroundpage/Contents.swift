@@ -1,3 +1,17 @@
+enum Direction {
+    case up, down, left, right
+}
+
+protocol Movable {
+    func move(_ direction: Direction, by distance: Int)
+}
+
+protocol Destructable {
+    func decreaseLife(by factor: Int)
+}
+
+protocol Attackable {}
+
 struct Point {
     let x: Int
     let y: Int
