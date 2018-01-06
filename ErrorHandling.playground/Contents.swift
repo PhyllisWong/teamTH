@@ -34,7 +34,7 @@ do {
     // Inform the user that they passed in invalidData
     print(description)
 } catch FriendError.someError {
-    
+    print("error error error")
 }
 
 
