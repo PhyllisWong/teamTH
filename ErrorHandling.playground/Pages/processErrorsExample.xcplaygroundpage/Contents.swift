@@ -1,4 +1,5 @@
-enum ReadError: Error {
+/*
+ enum ReadError: Error {
     case invalidFile
     case unableToReadLine
     
@@ -31,3 +32,4 @@ func process(file name: String) throws {
     
     // close(fileName: name) is called here at the end of the scope
 }
+ */
