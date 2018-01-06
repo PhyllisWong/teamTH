@@ -3,5 +3,6 @@
     <pages>
         <page name='parserExample'/>
         <page name='ErrorHandlingBasics'/>
+        <page name='processErrorsExample'/>
     </pages>
 </playground>
