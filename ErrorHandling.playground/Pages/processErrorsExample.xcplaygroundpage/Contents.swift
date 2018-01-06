@@ -24,4 +24,10 @@ func process(file name: String) throws {
     guard let line = try file.readLine() else {
         ReadError.unableToReadLine
     }
+    let file2 = open(fileName: name)
+    defer {
+        close(fileName: file2)
+    }
+    
+    // close(fileName: name) is called here at the end of the scope
 }
