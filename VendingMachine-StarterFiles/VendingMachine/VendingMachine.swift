@@ -35,9 +35,9 @@ protocol VendingMachine {
     
     init(inventory: [VendingSelection : VendingItem])
     
-    func vend(_ selection: VendingSelection, quantity: Int)
-    func vend(_ quantity: Int, of selection: VendingSelection) // vend 4 of .soda
-    func vend(selection: VendingSelection, quantity: Int) throws
+    // reads vend(4 .soda)
+    func vend(_ quantity: Int, _ selection: VendingSelection) throws
+    func deposit(_ amount: Double)
 }
 
 
