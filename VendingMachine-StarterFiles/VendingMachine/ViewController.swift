@@ -18,6 +18,20 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var quantityLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    
+    
+    let vendingMachine: VendingMachine
+    required init?(coder aDecoder: NSCoder) {
+        do {
+            let dictionary = try PlistConverter.dictionary(fromFile: "VendingInventory", ofType: "plist")
+            let inventory = try inventoryUnarchiver.vendingInventory(fromDictionary: dictionary)
+            self.vendingMachine = FoodVendingMachine(inventory: inventory)
+            super.init(coder: aDecoder) // Fixes this error : "self used before super.init call"
+        } catch let error {
+            fatalError("\(error)")
+        }
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
