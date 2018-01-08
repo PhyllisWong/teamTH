@@ -45,6 +45,23 @@ struct Item: VendingItem {
     var quantity: Int
 }
 
+enum InventoryError: Error {
+    case invalidResource
+    case conversionFailure
+}
+
+class PlistConverter {
+    static func dictionary(fromFile name: String, ofType type: String) throws -> [String:AnyObject] {
+        guard let path = Bundle.main.path(forResource: name, ofType: type) else {
+            throw InventoryError.invalidResource
+        }
+        guard let dictionary = NSDictionary(contentsOfFile: path) else {
+            throw InventoryError.conversionFailure
+        }
+        
+    }
+}
+
 class FoodVendingMachine: VendingMachine {
     let selection: [VendingSelection] = [.soda, .dietSoda, .chips, .cookie, .sandwich, .wrap, .candyBar, .popTart, .water, .fruitJuice, .sportsDrink, .gum]
     
@@ -55,8 +72,12 @@ class FoodVendingMachine: VendingMachine {
         self.inventory = inventory
     }
     
-    func vend(_ quantity: Int, _ selection: VendingSelection) throws {}
-    func deposit(_ amount: Double) {}
+    func vend(_ quantity: Int, _ selection: VendingSelection) throws {
+        
+    }
+    func deposit(_ amount: Double) {
+        
+    }
     
 }
 
