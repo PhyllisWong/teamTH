@@ -26,17 +26,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             let dictionary = try PlistConverter.dictionary(fromFile: "VendingInventory", ofType: "plist")
             let inventory = try inventoryUnarchiver.vendingInventory(fromDictionary: dictionary)
             self.vendingMachine = FoodVendingMachine(inventory: inventory)
-            super.init(coder: aDecoder) // Fixes this error : "self used before super.init call"
         } catch let error {
-            fatalError("\(error)")
+            fatalError("\(error)") // If we reach this block, app will crash
         }
-        
+        super.init(coder: aDecoder) // Fixes this error : "self used before super.init call"
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         setupCollectionViewCells()
+        print(vendingMachine.inventory)
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,11 +64,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // MARK: UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        // sets the display to show number of items in the selection
+        return vendingMachine.selection.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? VendingItemCell else { fatalError() }
+        
+        let item = vendingMachine.selection[indexPath.row]
+        cell.iconView.image = item.icon()
         
         return cell
     }
