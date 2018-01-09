@@ -1,10 +1,7 @@
-//
 //  ViewController.swift
 //  VendingMachine
-//
 //  Created by Pasan Premaratne on 12/1/16.
 //  Copyright © 2016 Treehouse Island, Inc. All rights reserved.
-//
 
 import UIKit
 
@@ -22,6 +19,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     let vendingMachine: VendingMachine
     var currentSelection: VendingSelection?
+    var quantity = 1
     
     required init?(coder aDecoder: NSCoder) {
         do {
@@ -38,7 +36,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         setupCollectionViewCells()
-        // print(vendingMachine.inventory)
+        print("\(vendingMachine.inventory)")
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,6 +61,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         collectionView.collectionViewLayout = layout
     }
     
+    // MARK: - Vending Machine 
+    
     // MARK: UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -86,7 +86,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         // Shows which item has been selected
         currentSelection = vendingMachine.selection[indexPath.row]
-        // print(currentSelection)
+        print(currentSelection!)
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
