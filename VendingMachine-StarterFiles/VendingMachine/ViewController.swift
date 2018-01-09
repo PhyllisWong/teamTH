@@ -21,6 +21,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     
     let vendingMachine: VendingMachine
+    var currentSelection: VendingSelection?
+    
     required init?(coder aDecoder: NSCoder) {
         do {
             let dictionary = try PlistConverter.dictionary(fromFile: "VendingInventory", ofType: "plist")
@@ -36,7 +38,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         setupCollectionViewCells()
-        print(vendingMachine.inventory)
+        // print(vendingMachine.inventory)
     }
 
     override func didReceiveMemoryWarning() {
@@ -81,6 +83,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         updateCell(having: indexPath, selected: true)
+        
+        // Shows which item has been selected
+        currentSelection = vendingMachine.selection[indexPath.row]
+        // print(currentSelection)
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -104,7 +110,5 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             cell.contentView.backgroundColor = selected ? selectedBackgroundColor : defaultBackgroundColor
         }
     }
-    
-    
 }
 
