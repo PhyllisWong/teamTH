@@ -61,7 +61,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         collectionView.collectionViewLayout = layout
     }
     
-    // MARK: - Vending Machine 
+    // MARK: - Vending Machine
+    @IBAction func purchase() {
+        if let currentSelection = currentSelection {
+            do {
+                try vendingMachine.vend(selection: currentSelection, quantity: quantity)
+            } catch {
+                // FIXME: Error handling code
+            }
+        } else {
+            // FIXME: Alert user to no selection
+        }
+    }
     
     // MARK: UICollectionViewDataSource
     
