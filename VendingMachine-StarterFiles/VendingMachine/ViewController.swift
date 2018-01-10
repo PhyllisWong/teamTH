@@ -15,6 +15,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var quantityLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var quantityStepper: UIStepper!
     
     
     let vendingMachine: VendingMachine
@@ -36,7 +37,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         setupCollectionViewCells()
-        print("\(vendingMachine.inventory)")
+        
+        balanceLabel.text = "$\(vendingMachine.amountDeposited)"
+        totalLabel.text = "$00.00"
+        priceLabel.text = "$0.00"
+        quantityLabel.text = "1"
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,13 +71,41 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if let currentSelection = currentSelection {
             do {
                 try vendingMachine.vend(selection: currentSelection, quantity: quantity)
+                updateDisplay()
             } catch {
                 // FIXME: Error handling code
             }
+            
+            if let indexPath = collectionView.indexPathsForSelectedItems?.first {
+                collectionView.deselectItem(at: indexPath, animated: true)
+                updateCell(having: indexPath, selected: false)
+            }
+            
         } else {
             // FIXME: Alert user to no selection
         }
     }
+    
+    func updateDisplay() {
+        balanceLabel.text = "$\(vendingMachine.amountDeposited)"
+        totalLabel.text = "$00.00"
+        priceLabel.text = "$0.00"
+    }
+    
+    func updateTotalPrice(for item: VendingItem) {
+        totalLabel.text = "$ \(item.price * Double(quantity))"
+    }
+    
+    
+    @IBAction func updateQuantity(_ sender: UIStepper) {
+        quantity = Int(sender.value)
+        quantityLabel.text = "\(quantity)"
+        
+        if let currentSelection = currentSelection, let item = vendingMachine.item(forSelection: currentSelection) {
+            updateTotalPrice(for: item)
+        }
+    }
+    
     
     // MARK: UICollectionViewDataSource
     
@@ -95,13 +128,24 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         updateCell(having: indexPath, selected: true)
         
+        // Update the quantity each time a new item is selected
+        quantityStepper.value = 1
+        quantityLabel.text = "1"
+        quantity = 1
+        
+        totalLabel.text = "0.00"
+        
         // Shows which item has been selected
         currentSelection = vendingMachine.selection[indexPath.row]
-        print(currentSelection!)
+        if let currentSelection = currentSelection, let item = vendingMachine.item(forSelection: currentSelection) {
+            priceLabel.text = "$\(item.price)"
+            totalLabel.text = "$\(item.price * Double(quantity))"
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         updateCell(having: indexPath, selected: false)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
