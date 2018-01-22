@@ -70,7 +70,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if let currentSelection = currentSelection {
             do {
                 try vendingMachine.vend(selection: currentSelection, quantity: Int(quantityStepper.value))
-                updateDisplayWith(balance: vendingMachine.amountDeposited, totalPrice: 0.0, itemPrice: 0)
+                updateDisplayWith(balance: vendingMachine.amountDeposited, totalPrice: 0.0, itemPrice: 0, itemQuantity: 1)
             } catch {
                 // FIXME: Error handling code
             }
@@ -85,7 +85,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
     
-    func updateDisplayWith(balance: Double? = nil, totalPrice: Double? = nil, itemPrice: Double? = nil) {
+    func updateDisplayWith(balance: Double? = nil, totalPrice: Double? = nil, itemPrice: Double? = nil, itemQuantity: Int? = nil) {
         
         if let balanceValue = balance {
            balanceLabel.text = "$\(balanceValue)"
@@ -96,10 +96,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if let itemValue = itemPrice {
             priceLabel.text = "$\(itemValue)"
         }
+        if let quantityValue = itemQuantity {
+            quantityLabel.text = "\(quantityValue)"
+        }
     }
     
     func updateTotalPrice(for item: VendingItem) {
-        totalLabel.text = "$ \(item.price * quantityStepper.value)"
+        
+        updateDisplayWith(totalPrice: item.price * quantityStepper.value)
     }
     
     
