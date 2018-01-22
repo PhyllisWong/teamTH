@@ -13,56 +13,69 @@ class GameScene: SKScene {
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     
-    var background = SKSpriteNode(imageNamed: "islandBackground.jpg")
+    var background = SKSpriteNode(imageNamed: "gold-sand.jpg")
     
     var player = SKSpriteNode()
-    var matchShape = SKShapeNode()
+    var matchShape: SKShapeNode!
+    
+    var isDragging = false
     
     override func didMove(to view: SKView) {
         
 //        background = SKSpriteNode(texture: nil, color: UIColor.clear, size: CGSize(width: 1334, height: 750))
-        background.position = CGPoint(x: frame.size.width/2, y: frame.size.height/2)
-        addChild(background)
+//        background.position = CGPoint(x: 0, y: 0)
+//        addChild(background)
         
         
 //        matchSpape = SKSpriteNode(color: UIColor.cyan, size: CGSize(width: 100, height: 100))
-        let w = (self.size.width + self.size.height) * 0.05
+//        let w = (self.size.width + self.size.height) * 0.05
         
-        matchShape.strokeColor = SKColor.cyan
-        matchShape = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
-        matchShape.position = CGPoint(x: -100, y: -100)
+        matchShape = childNode(withName: "matchShape") as! SKShapeNode
         
-        matchShape.lineWidth = 2.5
-        
-        matchShape.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
-        matchShape.run(SKAction.sequence([SKAction.wait(forDuration: 0.5), SKAction.fadeOut(withDuration: 0)]))
         
         player = SKSpriteNode(color: UIColor.cyan, size: CGSize(width: 90, height: 90))
-        player.anchorPoint = CGPoint(x: 0, y: 0)
+        player.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         player.position = CGPoint(x: 750, y: 350)
         
         print("x: \(player.position.x), y: \(player.position.y)")
         
         addChild(player)
-        addChild(matchShape)
         
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        for touch in touches {
-            
-            let location = touch.location(in: self)
-            player.position.x = location.x
-            player.position.y = location.y
-            
-            print("x: \(player.position.x), y: \(player.position.y)")
-
+        if let touch = touches.first {
+            if player.contains(touch.location(in: self)) {
+                isDragging = true
+            }
+            // movePlayerTo(location: touch.location(in: self))
         }
+        
+//        if let touch = touches.first {
+//            let location = touch.location(in: self)
+//            player.position = location
+//            // let movePlayer = SKAction.move(to: location, duration: 1.0)
+//            // player.run(movePlayer)
+//            print("coord: \(player.position)")
+//        }
+        
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+        if isDragging {
+            if let touch = touches.first {
+                movePlayerTo(location: touch.location(in: self))
+            }
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        isDragging = false
+    }
+    
+    func movePlayerTo(location: CGPoint) {
+        player.position = location
+        print("coord: \(player.position)")
     }
     
     override func update(_ currentTime: TimeInterval) {

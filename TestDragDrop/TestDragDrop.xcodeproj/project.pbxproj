@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B990E775201650D800DC21B5 /* islandBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B990E774201650D800DC21B5 /* islandBackground.jpg */; };
+		B990E7792016885B00DC21B5 /* gold-sand.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B990E7782016885B00DC21B5 /* gold-sand.jpg */; };
+		B990E77B201688DD00DC21B5 /* sea.png in Resources */ = {isa = PBXBuildFile; fileRef = B990E77A201688DD00DC21B5 /* sea.png */; };
 		B9E1CA032015170B00695418 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E1CA022015170B00695418 /* AppDelegate.swift */; };
 		B9E1CA052015170B00695418 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B9E1CA042015170B00695418 /* GameScene.sks */; };
 		B9E1CA072015170B00695418 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B9E1CA062015170B00695418 /* Actions.sks */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		B990E774201650D800DC21B5 /* islandBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = islandBackground.jpg; sourceTree = "<group>"; };
+		B990E7782016885B00DC21B5 /* gold-sand.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "gold-sand.jpg"; sourceTree = SOURCE_ROOT; };
+		B990E77A201688DD00DC21B5 /* sea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sea.png; sourceTree = SOURCE_ROOT; };
 		B9E1C9FF2015170B00695418 /* TestDragDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDragDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E1CA022015170B00695418 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9E1CA042015170B00695418 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -49,6 +53,8 @@
 			isa = PBXGroup;
 			children = (
 				B990E774201650D800DC21B5 /* islandBackground.jpg */,
+				B990E7782016885B00DC21B5 /* gold-sand.jpg */,
+				B990E77A201688DD00DC21B5 /* sea.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -178,8 +184,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B990E7792016885B00DC21B5 /* gold-sand.jpg in Resources */,
 				B9E1CA0E2015170B00695418 /* Main.storyboard in Resources */,
 				B9E1CA052015170B00695418 /* GameScene.sks in Resources */,
+				B990E77B201688DD00DC21B5 /* sea.png in Resources */,
 				B9E1CA102015170B00695418 /* Assets.xcassets in Resources */,
 				B9E1CA132015170B00695418 /* LaunchScreen.storyboard in Resources */,
 				B990E775201650D800DC21B5 /* islandBackground.jpg in Resources */,
@@ -337,7 +345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S44SNCV32X;
 				INFOPLIST_FILE = TestDragDrop/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.phyllisApps.TestDragDrop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,7 +361,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S44SNCV32X;
 				INFOPLIST_FILE = TestDragDrop/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.phyllisApps.TestDragDrop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
