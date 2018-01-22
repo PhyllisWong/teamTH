@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B990E775201650D800DC21B5 /* islandBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B990E774201650D800DC21B5 /* islandBackground.jpg */; };
 		B9E1CA032015170B00695418 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E1CA022015170B00695418 /* AppDelegate.swift */; };
 		B9E1CA052015170B00695418 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B9E1CA042015170B00695418 /* GameScene.sks */; };
 		B9E1CA072015170B00695418 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B9E1CA062015170B00695418 /* Actions.sks */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B990E774201650D800DC21B5 /* islandBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = islandBackground.jpg; sourceTree = "<group>"; };
 		B9E1C9FF2015170B00695418 /* TestDragDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDragDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E1CA022015170B00695418 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9E1CA042015170B00695418 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B990E76B20164D3200DC21B5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B990E774201650D800DC21B5 /* islandBackground.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		B9E1C9F62015170B00695418 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +72,7 @@
 		B9E1CA012015170B00695418 /* TestDragDrop */ = {
 			isa = PBXGroup;
 			children = (
+				B990E76B20164D3200DC21B5 /* Images */,
 				B9E1CA1E2015669F00695418 /* Classes */,
 				B9E1CA1D2015668D00695418 /* Scenes */,
 				B9E1CA1F201566B000695418 /* Storyboards */,
@@ -171,6 +182,7 @@
 				B9E1CA052015170B00695418 /* GameScene.sks in Resources */,
 				B9E1CA102015170B00695418 /* Assets.xcassets in Resources */,
 				B9E1CA132015170B00695418 /* LaunchScreen.storyboard in Resources */,
+				B990E775201650D800DC21B5 /* islandBackground.jpg in Resources */,
 				B9E1CA072015170B00695418 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
