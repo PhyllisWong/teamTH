@@ -11,20 +11,29 @@ import AVFoundation
 
 class GameScene: SKScene {
     
-    private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
+//    private var label : SKLabelNode?
+//    private var spinnyNode : SKShapeNode?
     
-    var background = SKSpriteNode(imageNamed: "gold-sand.jpg")
     var audio: AVAudioPlayer?
-    
     var player = SKSpriteNode()
     var matchShape: SKShapeNode!
     
     var isDragging = false
     
+    // call this function when the user successfully completes the challenges
+    func onSuccessAction() {
+        /*
+         1. particles or other visual
+         2. music plays
+         3. player peice fades
+         4. scene expands to just the black inside the square
+         5. transition to new scene
+        */
+    }
+    
+    
     override func didMove(to view: SKView) {
 
-        
         matchShape = childNode(withName: "matchShape") as! SKShapeNode
         
         player = SKSpriteNode(color: UIColor.cyan, size: CGSize(width: 90, height: 90))

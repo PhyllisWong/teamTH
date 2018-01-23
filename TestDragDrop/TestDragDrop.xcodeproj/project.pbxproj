@@ -10,10 +10,12 @@
 		B990E775201650D800DC21B5 /* islandBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B990E774201650D800DC21B5 /* islandBackground.jpg */; };
 		B990E7792016885B00DC21B5 /* gold-sand.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B990E7782016885B00DC21B5 /* gold-sand.jpg */; };
 		B990E77B201688DD00DC21B5 /* sea.png in Resources */ = {isa = PBXBuildFile; fileRef = B990E77A201688DD00DC21B5 /* sea.png */; };
+		B990E77F2017133400DC21B5 /* LevelTwo.sks in Resources */ = {isa = PBXBuildFile; fileRef = B990E77E2017133400DC21B5 /* LevelTwo.sks */; };
+		B990E7812017135500DC21B5 /* LevelTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B990E7802017135500DC21B5 /* LevelTwo.swift */; };
 		B9E1CA032015170B00695418 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E1CA022015170B00695418 /* AppDelegate.swift */; };
-		B9E1CA052015170B00695418 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B9E1CA042015170B00695418 /* GameScene.sks */; };
+		B9E1CA052015170B00695418 /* LevelOne.sks in Resources */ = {isa = PBXBuildFile; fileRef = B9E1CA042015170B00695418 /* LevelOne.sks */; };
 		B9E1CA072015170B00695418 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B9E1CA062015170B00695418 /* Actions.sks */; };
-		B9E1CA092015170B00695418 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E1CA082015170B00695418 /* GameScene.swift */; };
+		B9E1CA092015170B00695418 /* LevelOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E1CA082015170B00695418 /* LevelOne.swift */; };
 		B9E1CA0B2015170B00695418 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E1CA0A2015170B00695418 /* GameViewController.swift */; };
 		B9E1CA0E2015170B00695418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9E1CA0C2015170B00695418 /* Main.storyboard */; };
 		B9E1CA102015170B00695418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E1CA0F2015170B00695418 /* Assets.xcassets */; };
@@ -25,11 +27,13 @@
 		B990E774201650D800DC21B5 /* islandBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = islandBackground.jpg; sourceTree = "<group>"; };
 		B990E7782016885B00DC21B5 /* gold-sand.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "gold-sand.jpg"; sourceTree = SOURCE_ROOT; };
 		B990E77A201688DD00DC21B5 /* sea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sea.png; sourceTree = SOURCE_ROOT; };
+		B990E77E2017133400DC21B5 /* LevelTwo.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LevelTwo.sks; sourceTree = "<group>"; };
+		B990E7802017135500DC21B5 /* LevelTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTwo.swift; sourceTree = "<group>"; };
 		B9E1C9FF2015170B00695418 /* TestDragDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDragDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E1CA022015170B00695418 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B9E1CA042015170B00695418 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		B9E1CA042015170B00695418 /* LevelOne.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LevelOne.sks; sourceTree = "<group>"; };
 		B9E1CA062015170B00695418 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		B9E1CA082015170B00695418 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		B9E1CA082015170B00695418 /* LevelOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelOne.swift; sourceTree = "<group>"; };
 		B9E1CA0A2015170B00695418 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		B9E1CA0D2015170B00695418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9E1CA0F2015170B00695418 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,10 +104,12 @@
 		B9E1CA1D2015668D00695418 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				B9E1CA042015170B00695418 /* GameScene.sks */,
-				B9E1CA082015170B00695418 /* GameScene.swift */,
+				B9E1CA042015170B00695418 /* LevelOne.sks */,
+				B9E1CA082015170B00695418 /* LevelOne.swift */,
 				B9E1CA062015170B00695418 /* Actions.sks */,
 				B9E1CA1A2015184400695418 /* TestGameScene.swift */,
+				B990E77E2017133400DC21B5 /* LevelTwo.sks */,
+				B990E7802017135500DC21B5 /* LevelTwo.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -185,8 +191,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B990E7792016885B00DC21B5 /* gold-sand.jpg in Resources */,
+				B990E77F2017133400DC21B5 /* LevelTwo.sks in Resources */,
 				B9E1CA0E2015170B00695418 /* Main.storyboard in Resources */,
-				B9E1CA052015170B00695418 /* GameScene.sks in Resources */,
+				B9E1CA052015170B00695418 /* LevelOne.sks in Resources */,
 				B990E77B201688DD00DC21B5 /* sea.png in Resources */,
 				B9E1CA102015170B00695418 /* Assets.xcassets in Resources */,
 				B9E1CA132015170B00695418 /* LaunchScreen.storyboard in Resources */,
@@ -202,9 +209,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9E1CA092015170B00695418 /* GameScene.swift in Sources */,
+				B9E1CA092015170B00695418 /* LevelOne.swift in Sources */,
 				B9E1CA0B2015170B00695418 /* GameViewController.swift in Sources */,
 				B9E1CA1B2015184400695418 /* TestGameScene.swift in Sources */,
+				B990E7812017135500DC21B5 /* LevelTwo.swift in Sources */,
 				B9E1CA032015170B00695418 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
