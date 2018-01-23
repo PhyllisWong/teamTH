@@ -2,7 +2,7 @@
 //  LevelTwo.swift
 //  TestDragDrop
 //
-//  Created by djchai on 1/22/18.
+//  Created by Phyllis Wong on 1/22/18.
 //  Copyright © 2018 Phyllis Wong. All rights reserved.
 //
 
@@ -118,11 +118,7 @@ class LevelTwo: SKScene {
                 }
                 print("Success")
                 
-                // FIXME: Should transition to a new scene here
-                let levelTwo = LevelTwo(fileNamed: "LevelTwo")
-                levelTwo?.scaleMode = .aspectFill
-                self.view?.presentScene(levelTwo!)
-
+               
             }
         }
     }
