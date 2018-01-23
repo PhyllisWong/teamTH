@@ -113,9 +113,9 @@ class GameScene: SKScene {
                     }
                 }
                 // FIXME: Should transition to a new scene here
-                let levelTwo = LevelTwo(fileNamed: "LevelTwo")
-                levelTwo?.scaleMode = .aspectFill
-                self.view?.presentScene(levelTwo!)
+               // let levelTwo = LevelTwo(fileNamed: "LevelTwo")
+                //levelTwo?.scaleMode = .aspectFill
+               // self.view?.presentScene(levelTwo!)
                 print("Success")
             }
         }
