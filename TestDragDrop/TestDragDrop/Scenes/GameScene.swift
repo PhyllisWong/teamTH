@@ -21,23 +21,13 @@ class GameScene: SKScene {
     var isDragging = false
     
     override func didMove(to view: SKView) {
-        
-//        background = SKSpriteNode(texture: nil, color: UIColor.clear, size: CGSize(width: 1334, height: 750))
-//        background.position = CGPoint(x: 0, y: 0)
-//        addChild(background)
-        
-        
-//        matchSpape = SKSpriteNode(color: UIColor.cyan, size: CGSize(width: 100, height: 100))
-//        let w = (self.size.width + self.size.height) * 0.05
+
         
         matchShape = childNode(withName: "matchShape") as! SKShapeNode
-        
         
         player = SKSpriteNode(color: UIColor.cyan, size: CGSize(width: 90, height: 90))
         player.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         player.position = CGPoint(x: 750, y: 350)
-        
-        print("x: \(player.position.x), y: \(player.position.y)")
         
         addChild(player)
         
@@ -48,7 +38,6 @@ class GameScene: SKScene {
             if player.contains(touch.location(in: self)) {
                 isDragging = true
             }
-            // movePlayerTo(location: touch.location(in: self))
         }
         
 //        if let touch = touches.first {
@@ -71,11 +60,31 @@ class GameScene: SKScene {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         isDragging = false
+        
+        // Get the coordinates of the player when touch ends
+        let xCoord = player.position.x
+        let yCoord = player.position.y
+        
+        // Get the range around the matchShape
+        let upperBoundx = matchShape.position.x + 30
+        let upperBoundy = matchShape.position.y + 30
+        let lowerBoundx = matchShape.position.x - 30
+        let lowerBoundy = matchShape.position.y - 30
+
+        // Check if the player is within the range of coordinates of the matchShape
+        if lowerBoundx <= xCoord && xCoord <= upperBoundx {
+            if lowerBoundy <= yCoord && yCoord <= upperBoundy {
+                
+                // Spin the player to show that the user solved the challenge
+                player.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 0.5)))
+                print("Success")
+            }
+        }
     }
+    
     
     func movePlayerTo(location: CGPoint) {
         player.position = location
-        print("coord: \(player.position)")
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -103,7 +112,6 @@ class GameScene: SKScene {
 //                                              SKAction.fadeOut(withDuration: 0.5),
 //                                              SKAction.removeFromParent()]))
 //        }
-        
 //    }
     
     
