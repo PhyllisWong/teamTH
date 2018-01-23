@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import AVFoundation
 
 class GameScene: SKScene {
     
@@ -14,6 +15,7 @@ class GameScene: SKScene {
     private var spinnyNode : SKShapeNode?
     
     var background = SKSpriteNode(imageNamed: "gold-sand.jpg")
+    var audio: AVAudioPlayer?
     
     var player = SKSpriteNode()
     var matchShape: SKShapeNode!
@@ -34,20 +36,29 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        // only perform these actions if the user touches on the shape
         if let touch = touches.first {
             if player.contains(touch.location(in: self)) {
+                
+                // increase the player size to que the user that they touches the piece
+                player.size = CGSize(width: 100, height: 100)
                 isDragging = true
+                
+                // Fetch the sound data set.
+                if let asset = NSDataAsset(name: "cartoon_voice_says_yahoo") {
+                    do {
+                    // Use NSDataAssets's data property to access the audio file stored in cartoon voice says yahoo.
+                        audio = try AVAudioPlayer(data: asset.data, fileTypeHint: ".mp3")
+                        // Play the above sound file
+                        audio?.play()
+                    } catch let error as NSError {
+                        // Should print...
+                        print(error.localizedDescription)
+                    }
+                }
             }
         }
-        
-//        if let touch = touches.first {
-//            let location = touch.location(in: self)
-//            player.position = location
-//            // let movePlayer = SKAction.move(to: location, duration: 1.0)
-//            // player.run(movePlayer)
-//            print("coord: \(player.position)")
-//        }
-        
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -60,6 +71,9 @@ class GameScene: SKScene {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         isDragging = false
+        
+        // reset the player size to the original size
+        player.size = CGSize(width: 90, height: 90)
         
         // Get the coordinates of the player when touch ends
         let xCoord = player.position.x
