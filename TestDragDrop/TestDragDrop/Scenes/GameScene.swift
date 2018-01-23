@@ -91,6 +91,19 @@ class GameScene: SKScene {
                 
                 // Spin the player to show that the user solved the challenge
                 player.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 0.5)))
+                // Fetch the sound data set.
+                if let asset = NSDataAsset(name: "mr_clown_music") {
+                    do {
+                        // Use NSDataAssets's data property to access the audio file stored in cartoon voice says yahoo.
+                        audio = try AVAudioPlayer(data: asset.data, fileTypeHint: ".mp3")
+                        // Play the above sound file
+                        audio?.play()
+                    } catch let error as NSError {
+                        // Should print...
+                        print(error.localizedDescription)
+                    }
+                }
+                
                 print("Success")
             }
         }
