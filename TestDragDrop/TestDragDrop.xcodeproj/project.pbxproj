@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B990E775201650D800DC21B5 /* islandBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B990E774201650D800DC21B5 /* islandBackground.jpg */; };
-		B990E7792016885B00DC21B5 /* gold-sand.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B990E7782016885B00DC21B5 /* gold-sand.jpg */; };
-		B990E77B201688DD00DC21B5 /* sea.png in Resources */ = {isa = PBXBuildFile; fileRef = B990E77A201688DD00DC21B5 /* sea.png */; };
 		B990E77F2017133400DC21B5 /* LevelTwo.sks in Resources */ = {isa = PBXBuildFile; fileRef = B990E77E2017133400DC21B5 /* LevelTwo.sks */; };
 		B990E7812017135500DC21B5 /* LevelTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B990E7802017135500DC21B5 /* LevelTwo.swift */; };
 		B9E1CA032015170B00695418 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E1CA022015170B00695418 /* AppDelegate.swift */; };
@@ -24,9 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B990E774201650D800DC21B5 /* islandBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = islandBackground.jpg; sourceTree = "<group>"; };
-		B990E7782016885B00DC21B5 /* gold-sand.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "gold-sand.jpg"; sourceTree = SOURCE_ROOT; };
-		B990E77A201688DD00DC21B5 /* sea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sea.png; sourceTree = SOURCE_ROOT; };
 		B990E77E2017133400DC21B5 /* LevelTwo.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LevelTwo.sks; sourceTree = "<group>"; };
 		B990E7802017135500DC21B5 /* LevelTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTwo.swift; sourceTree = "<group>"; };
 		B9E1C9FF2015170B00695418 /* TestDragDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDragDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,16 +47,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B990E76B20164D3200DC21B5 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				B990E774201650D800DC21B5 /* islandBackground.jpg */,
-				B990E7782016885B00DC21B5 /* gold-sand.jpg */,
-				B990E77A201688DD00DC21B5 /* sea.png */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
 		B9E1C9F62015170B00695418 = {
 			isa = PBXGroup;
 			children = (
@@ -82,9 +66,8 @@
 		B9E1CA012015170B00695418 /* TestDragDrop */ = {
 			isa = PBXGroup;
 			children = (
-				B990E76B20164D3200DC21B5 /* Images */,
 				B9E1CA1E2015669F00695418 /* Classes */,
-				B9E1CA1D2015668D00695418 /* Scenes */,
+				B9E1CA1D2015668D00695418 /* DDScenes */,
 				B9E1CA1F201566B000695418 /* Storyboards */,
 				B9E1CA1C2015668600695418 /* View Controllers */,
 				B9E1CA0F2015170B00695418 /* Assets.xcassets */,
@@ -101,7 +84,7 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		B9E1CA1D2015668D00695418 /* Scenes */ = {
+		B9E1CA1D2015668D00695418 /* DDScenes */ = {
 			isa = PBXGroup;
 			children = (
 				B9E1CA042015170B00695418 /* LevelOne.sks */,
@@ -111,7 +94,7 @@
 				B990E77E2017133400DC21B5 /* LevelTwo.sks */,
 				B990E7802017135500DC21B5 /* LevelTwo.swift */,
 			);
-			path = Scenes;
+			path = DDScenes;
 			sourceTree = "<group>";
 		};
 		B9E1CA1E2015669F00695418 /* Classes */ = {
@@ -190,14 +173,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B990E7792016885B00DC21B5 /* gold-sand.jpg in Resources */,
 				B990E77F2017133400DC21B5 /* LevelTwo.sks in Resources */,
 				B9E1CA0E2015170B00695418 /* Main.storyboard in Resources */,
 				B9E1CA052015170B00695418 /* LevelOne.sks in Resources */,
-				B990E77B201688DD00DC21B5 /* sea.png in Resources */,
 				B9E1CA102015170B00695418 /* Assets.xcassets in Resources */,
 				B9E1CA132015170B00695418 /* LaunchScreen.storyboard in Resources */,
-				B990E775201650D800DC21B5 /* islandBackground.jpg in Resources */,
 				B9E1CA072015170B00695418 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
