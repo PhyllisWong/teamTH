@@ -15,8 +15,6 @@ class GameScene: SKScene {
     var player: SKSpriteNode!
     
     
-    
-    
     override func didMove(to view: SKView) {
         
         starfield = SKEmitterNode(fileNamed: "Starfield")
