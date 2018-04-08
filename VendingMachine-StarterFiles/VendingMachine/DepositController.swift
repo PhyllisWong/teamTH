@@ -10,6 +10,7 @@ import UIKit
 
 class DepositController: UIViewController {
 
+    // Handles all cash deposits
     override func viewDidLoad() {
         super.viewDidLoad()
 
