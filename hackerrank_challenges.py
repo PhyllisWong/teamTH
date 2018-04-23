@@ -1,7 +1,29 @@
 a = fsqoiaidfaukvngpsugszsnseskicpejjvytviya
 b = ksmfgsxamduovigbasjchnoskolfwjhgetnmnkmcphqmpwnrrwtymjtwxget
 
-
+#
+# We define an hourglass in  to be a subset of values with indices falling in this pattern in 's graphical representation:
+#
+# a b c
+#   d
+# e f g
+# There are  hourglasses in , and an hourglass sum is the sum of an hourglass' values.
+#
+# Task
+# Calculate the hourglass sum for every hourglass in , then print the maximum hourglass sum.
+#
+# Note: If you have already solved the Java domain's Java 2D Array challenge, you may wish to skip this challenge.
+#
+# Input Format
+#
+# There are  lines of input, where each line contains  space-separated integers describing 2D Array ; every value in  will be in the inclusive range of  to .
+#
+# Constraints
+#
+# Output Format
+#
+# Print the largest (maximum) hourglass sum found in .
+# */
 # def number_needed(a, b):
 #     count = 0
 #
