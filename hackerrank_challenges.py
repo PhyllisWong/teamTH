@@ -1,5 +1,5 @@
-a = fsqoiaidfaukvngpsugszsnseskicpejjvytviya
-b = ksmfgsxamduovigbasjchnoskolfwjhgetnmnkmcphqmpwnrrwtymjtwxget
+# a = fsqoiaidfaukvngpsugszsnseskicpejjvytviya
+# b = ksmfgsxamduovigbasjchnoskolfwjhgetnmnkmcphqmpwnrrwtymjtwxget
 
 #
 # We define an hourglass in  to be a subset of values with indices falling in this pattern in 's graphical representation:
@@ -89,10 +89,10 @@ for j in range(1,n-1):
 def main(self):
     # tree = createTree()
     # print(tree)
-
+    pass
 
 
 
 if __name__ == '__main__':
-      main()
+    main()
     # test_binary_search_tree()
