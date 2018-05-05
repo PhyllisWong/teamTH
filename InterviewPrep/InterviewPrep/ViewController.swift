@@ -21,24 +21,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    // Get the initial width and height
-    lazy var width = self.view.frame.width - 20
-    lazy var height = self.view.frame.height - 20
-    lazy var xPos: CGFloat = 20.0
-    lazy var yPos: CGFloat = 20.0
-    
     
     func makeBoxes() {
         let grid = [[3,3,3], [2,2], [4,4,4,4], [1]]
-        self.height = (self.view.frame.height - 100) / CGFloat(grid.count)
+        let padding = CGFloat(20)
+        var yPos: CGFloat = 20.0
         
-        // 0, 1, 2, 3
+        // Get the height of the grid
+        let h = CGFloat(grid.count)
+        
+        // Set the box height minus the margin and padding
+        let height = (self.view.frame.height - ((h + CGFloat(1)) * 20)) / h
+        
         for column in 0..<grid.count {
-            
             for row in 0..<grid[column].count {
-                let padding = CGFloat(20)
+                
+                // Set the width by the number of boxes on each row - margin and padding
                 let width = ((self.view.frame.width - padding) - CGFloat(grid[column].count * 20)) / CGFloat(grid[column].count)
-                let xPos = (width + 20) * CGFloat(row) + 20
+                let xPos = (width + padding) * CGFloat(row) + padding
                 let rect = CGRect(x: xPos, y: yPos, width: width, height: height)
         
                 let box = UIView(frame: rect)
@@ -46,7 +46,8 @@ class ViewController: UIViewController {
                 self.view.addSubview(box)
             }
             
-            yPos += height + CGFloat(20)
+            // Set the position of the next row down
+            yPos += height + padding
         }
     }
     
