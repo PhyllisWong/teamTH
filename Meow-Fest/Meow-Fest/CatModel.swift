@@ -8,9 +8,6 @@
 
 import Foundation
 
-struct CatsList: Decodable {
-    let cats: [Cat]
-}
 
 // Data structure to display in each tableViewCell
 struct Cat {

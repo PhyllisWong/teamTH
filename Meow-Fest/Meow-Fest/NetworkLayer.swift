@@ -93,10 +93,19 @@ class Networking {
             if let data = data {
                 switch resource {
                 case .cats:
-                    let catsList = try? JSONDecoder().decode(CatsList.self, from: data)
-                    guard let cats = catsList?.cats else { return }
-                    //                    print("do something")
-                    return completion(cats)
+                    
+                    // Change to a do {} catch {} block
+                    
+                    do {
+                        let catsList = try JSONDecoder().decode([Cat].self, from: data)
+                        return completion(catsList)
+                    } catch {
+                        
+                    }
+                    
+                    
+                    
+                    
                     
                 }
             }
