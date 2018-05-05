@@ -50,12 +50,7 @@ class ViewController: UIViewController {
             yPos += height + padding
         }
     }
-    
-    // MARK: - Lifecycle
-    
-    // Add the container to the screen before the view appears
-    override func viewWillAppear(_ animated: Bool) {
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
