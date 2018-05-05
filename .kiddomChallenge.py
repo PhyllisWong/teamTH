@@ -1,4 +1,4 @@
-"""
+
 def printNums(n, i=1):
 
     if i < n + 1:
@@ -7,7 +7,7 @@ def printNums(n, i=1):
 
 
 printNums(20)
-"""
+
 
 
 """
@@ -33,43 +33,39 @@ printNums(20)
 # Output, coordinate ex. (0, 0)
 
 def findRect(image):
-
-    width = []
     first_coord = 0
-
+    last_coord = 0
 
     for _list in range(len(image)):
-        # print(image[_list])
         inner_list = image[_list]
-        second_coord = 0
 
         for i in range(len(inner_list)):
-            if inner_list[i] == 1 and first_coord == 0:
-                first_coord = (i, _list)
-                print(first_coord)
-#                width.append(i)
 
-            if  inner_list[i] == 1 and inner_list[i+1] == 0 and last_coord == 0:
+            if inner_list[i] == 1:
+                if first_coord == 0:
+                    first_coord = (i, _list)
+                    first_coord = ('first_coord: {}'.format(first_coord))
 
+            if  inner_list[i] == 1 and inner_list[i+1] == 0:
                 last_coord = (i, _list)
-                print(last_coord)
-#                    width.append(second_coord)
-#    print(width)
+                last_coord = ('first_coord: {}'.format(last_coord))
+                
+    print(first_coord, last_coord)
 
 
 image = [
+  [0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ]
