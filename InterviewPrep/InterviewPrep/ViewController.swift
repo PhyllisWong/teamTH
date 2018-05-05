@@ -30,15 +30,15 @@ class ViewController: UIViewController {
     
     func makeBoxes() {
         let grid = [[3,3,3], [2,2], [4,4,4,4], [1]]
-        self.height = (self.view.frame.height / CGFloat(grid.count)) - 30
+        self.height = (self.view.frame.height - 100) / CGFloat(grid.count)
         
         // 0, 1, 2, 3
         for column in 0..<grid.count {
             
             for row in 0..<grid[column].count {
-
-                let width = (self.view.frame.width / CGFloat(grid[column].count)) - 40
-                let xPos = (width * CGFloat(row)) + 20
+                let padding = CGFloat(20)
+                let width = ((self.view.frame.width - padding) - CGFloat(grid[column].count * 20)) / CGFloat(grid[column].count)
+                let xPos = (width + 20) * CGFloat(row) + 20
                 let rect = CGRect(x: xPos, y: yPos, width: width, height: height)
         
                 let box = UIView(frame: rect)
