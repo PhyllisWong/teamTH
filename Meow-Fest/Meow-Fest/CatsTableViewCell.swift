@@ -7,8 +7,27 @@
 //
 
 import UIKit
+import WebKit
 
 class CatsTableViewCell: UITableViewCell {
+  
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descripLabel: UILabel!
+    @IBOutlet weak var imageWebView: WKWebView!
+    
+    
+    var cat: Cat? {
+            didSet {
+                timeLabel.text = cat?.timestamp
+                nameLabel.text = cat?.title
+                descripLabel.text = cat?.description
+                
+                let request = URLRequest(url: (cat?.image_url)!)
+                imageWebView.load(request)
+            }
+        }
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

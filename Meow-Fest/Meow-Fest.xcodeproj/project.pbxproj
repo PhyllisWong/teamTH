@@ -14,6 +14,8 @@
 		B97933BD209E23F4009EDE8D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97933BC209E23F4009EDE8D /* TableViewController.swift */; };
 		B97933BF209E258C009EDE8D /* CatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97933BE209E258C009EDE8D /* CatsTableViewCell.swift */; };
 		B97933C1209E25EE009EDE8D /* CatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97933C0209E25EE009EDE8D /* CatModel.swift */; };
+		B97933C5209E30BF009EDE8D /* NetworkingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97933C4209E30BF009EDE8D /* NetworkingLayer.swift */; };
+		B97933C7209E3197009EDE8D /* NetworkingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97933C6209E3197009EDE8D /* NetworkingLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		B97933BC209E23F4009EDE8D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		B97933BE209E258C009EDE8D /* CatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsTableViewCell.swift; sourceTree = "<group>"; };
 		B97933C0209E25EE009EDE8D /* CatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatModel.swift; sourceTree = "<group>"; };
+		B97933C4209E30BF009EDE8D /* NetworkingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingLayer.swift; sourceTree = "<group>"; };
+		B97933C6209E3197009EDE8D /* NetworkingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 		B979339E209E2287009EDE8D = {
 			isa = PBXGroup;
 			children = (
+				B97933C4209E30BF009EDE8D /* NetworkingLayer.swift */,
 				B97933A9209E2287009EDE8D /* Meow-Fest */,
 				B97933A8209E2287009EDE8D /* Products */,
 			);
@@ -60,9 +65,10 @@
 			children = (
 				B97933AA209E2287009EDE8D /* AppDelegate.swift */,
 				B97933BC209E23F4009EDE8D /* TableViewController.swift */,
-				B97933C0209E25EE009EDE8D /* CatModel.swift */,
-				B97933AE209E2287009EDE8D /* Main.storyboard */,
 				B97933BE209E258C009EDE8D /* CatsTableViewCell.swift */,
+				B97933C0209E25EE009EDE8D /* CatModel.swift */,
+				B97933C6209E3197009EDE8D /* NetworkingLayer.swift */,
+				B97933AE209E2287009EDE8D /* Main.storyboard */,
 				B97933B1209E2289009EDE8D /* Assets.xcassets */,
 				B97933B3209E2289009EDE8D /* LaunchScreen.storyboard */,
 				B97933B6209E2289009EDE8D /* Info.plist */,
@@ -142,7 +148,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B97933C1209E25EE009EDE8D /* CatModel.swift in Sources */,
+				B97933C7209E3197009EDE8D /* NetworkingLayer.swift in Sources */,
 				B97933BF209E258C009EDE8D /* CatsTableViewCell.swift in Sources */,
+				B97933C5209E30BF009EDE8D /* NetworkingLayer.swift in Sources */,
 				B97933AB209E2287009EDE8D /* AppDelegate.swift in Sources */,
 				B97933BD209E23F4009EDE8D /* TableViewController.swift in Sources */,
 			);

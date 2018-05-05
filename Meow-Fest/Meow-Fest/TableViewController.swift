@@ -9,10 +9,23 @@
 import UIKit
 
 class TableViewController: UITableViewController {
+    
+    var catsList = [Cat]()
+    var id: Int?
+    var catName: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let networking = Networking()
+        networking.fetch(resource: .cats) { (result) in
+            DispatchQueue.main.async {
+                guard let catsList = result as? [Cat] else { fatalError("Could not parse json") }
+                self.catsList = [Cat]()
+                self.catsList = catsList
+                self.tableView.reloadData()
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

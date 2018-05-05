@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="283" id="kwP-Bj-2Rs">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="283" id="kwP-Bj-2Rs" customClass="CatsTableViewCell" customModule="Meow_Fest" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="283"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kwP-Bj-2Rs" id="WWg-K6-FYv">
@@ -64,6 +64,12 @@
                                         <constraint firstItem="aeg-li-6Bz" firstAttribute="top" secondItem="WWg-K6-FYv" secondAttribute="top" constant="16" id="oDR-g7-Uum"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descripLabel" destination="t3b-Iu-BrC" id="0G0-MX-rfD"/>
+                                    <outlet property="imageWebView" destination="OV2-is-XEH" id="5i0-cx-z9z"/>
+                                    <outlet property="nameLabel" destination="tmb-nZ-9jf" id="oy7-Mc-5f1"/>
+                                    <outlet property="timeLabel" destination="QpH-wa-Srn" id="RFQ-4E-YT6"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
