@@ -18,18 +18,38 @@ class CatsTableViewCell: UITableViewCell {
     
     
     var cat: Cat? {
-            didSet {
-                timeLabel.text = cat?.timestamp
-                nameLabel.text = cat?.title
-                descripLabel.text = cat?.description
-                catImageView.downloadedFrom(url: (cat?.image_url)!, contentMode: .scaleAspectFit)
-            }
+        didSet {
+            
+            nameLabel.text = cat?.title
+            descripLabel.text = cat?.description
+            catImageView.downloadedFrom(url: (cat?.image_url)!, contentMode: .scaleAspectFill)
+            
+            // format date
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .long
+            dateFormatter.timeStyle = .none
+            let myDate = cat?.timestamp.toDate(dateFormat: (cat?.timestamp)!)
+            timeLabel.text = dateFormatter.string(from: myDate!)
         }
+    }
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        self.catImageView.layer.shadowOffset =  CGSize(width: 0, height: 1)   // CGSizeMake(0, 1)
+        self.catImageView.layer.shadowColor = UIColor.black.cgColor
+        self.catImageView.layer.shadowRadius = 1.5
+        self.catImageView.layer.shadowOpacity = 0.65
+        self.catImageView.layer.cornerRadius = 1
+        self.catImageView.clipsToBounds = true
+        self.catImageView.layer.masksToBounds = false
+        self.layer.masksToBounds = false
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        catImageView.layer.cornerRadius = 15.0
+        catImageView.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -65,5 +85,17 @@ extension UIImageView {
     }
 }
 
+extension String {
+    func  toDate( dateFormat format  : String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        
+        if let date = dateFormatter.date(from: self) {
+            return date
+        }
+        print("Invalid arguments ! Returning Current Date . ")
+        return Date()
+    }
+}
 
 
