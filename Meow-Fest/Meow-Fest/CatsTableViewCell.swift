@@ -25,18 +25,23 @@ class CatsTableViewCell: UITableViewCell {
             catImageView.downloadedFrom(url: (cat?.image_url)!, contentMode: .scaleAspectFill)
             
             // format date
+            let isoDate = (cat?.timestamp)!
             let dateFormatter = DateFormatter()
+//            dateFormatter.dateFormat = "MMM d, yyyy"
             dateFormatter.dateStyle = .long
             dateFormatter.timeStyle = .none
-            let myDate = cat?.timestamp.toDate(dateFormat: (cat?.timestamp)!)
+//            dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+            let myDate = cat?.timestamp.toDate(dateFormat: (isoDate))
+//            let date = dateFormatter.date(from: isoDate)
             timeLabel.text = dateFormatter.string(from: myDate!)
+
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.catImageView.layer.shadowOffset =  CGSize(width: 0, height: 1)   // CGSizeMake(0, 1)
+        self.catImageView.layer.shadowOffset =  CGSize(width: 0, height: 1)
         self.catImageView.layer.shadowColor = UIColor.black.cgColor
         self.catImageView.layer.shadowRadius = 1.5
         self.catImageView.layer.shadowOpacity = 0.65
@@ -89,11 +94,11 @@ extension String {
     func  toDate( dateFormat format  : String) -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
-        
+
         if let date = dateFormatter.date(from: self) {
             return date
         }
-        print("Invalid arguments ! Returning Current Date . ")
+        print("Invalid arguments! Returning Current Date.")
         return Date()
     }
 }
